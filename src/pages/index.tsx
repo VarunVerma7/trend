@@ -35,7 +35,16 @@ function Copyright() {
 
 const cards = [1, 2, 3];
 
-const theme = createTheme();
+const theme = createTheme({
+  typography: {
+    body1: {
+      color: "white",
+    },
+    h6: {
+      color: "white",
+    },
+  },
+});
 
 export default function Album() {
   return (
@@ -60,7 +69,6 @@ export default function Album() {
         <Container maxWidth="xl">
           <Box
             sx={{
-              bgcolor: "background.paper",
               pt: 8,
               pb: 6,
             }}
@@ -80,7 +88,13 @@ export default function Album() {
               </Grid>
               <Grid item>
                 {" "}
-                <Button>
+                <Button
+                  variant="contained"
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    color: "black",
+                  }}
+                >
                   Start Without a Pack
                   <ArrowRightAltIcon />
                 </Button>
@@ -91,7 +105,6 @@ export default function Album() {
         <Container maxWidth="xl">
           <Box
             sx={{
-              bgcolor: "background.paper",
               pb: 6,
             }}
           >

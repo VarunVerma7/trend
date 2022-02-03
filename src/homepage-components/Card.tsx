@@ -21,6 +21,7 @@ export default function MediaCard() {
         height: "100%",
         display: "flex",
         flexDirection: "column",
+        backgroundColor: "#171717",
       }}
     >
       <CardMedia

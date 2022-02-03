@@ -17,6 +17,9 @@ import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MediaCard from "../homepage-components/Card";
+import { Paper } from "@mui/material";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -38,10 +41,15 @@ export default function Album() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar position="relative">
+      <AppBar style={{ background: "#141414" }} position="relative">
         <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
+          <Paper />
+          <Typography
+            align="right"
+            variant="h6"
+            color="inherit"
+            style={{ flex: 1 }}
+          >
             Note: This tool is for Brands. If you're a Creator, Apply to join
             the network here
           </Typography>
@@ -57,20 +65,26 @@ export default function Album() {
               pb: 6,
             }}
           >
-            <Grid container>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexWrap: "wrap",
-                }}
-              >
-                <ArrowBackIcon />
-                <Typography>Content Quick Packs</Typography>
-                <Grid item justifyContent="flex-end">
-                  <Button>Start Without a Pack</Button>
-                </Grid>
-              </div>
+            <Grid container justifyContent="space-between">
+              <Grid item>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <ArrowBackIcon />
+                  <Typography>Content Quick Packs</Typography>
+                </div>
+              </Grid>
+              <Grid item>
+                {" "}
+                <Button>
+                  Start Without a Pack
+                  <ArrowRightAltIcon />
+                </Button>
+              </Grid>
             </Grid>
           </Box>
         </Container>
@@ -78,7 +92,6 @@ export default function Album() {
           <Box
             sx={{
               bgcolor: "background.paper",
-              pt: 8,
               pb: 6,
             }}
           >
@@ -120,22 +133,6 @@ export default function Album() {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
-      <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }

@@ -12,6 +12,8 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import Chip from "@mui/material/Chip";
+
 export default function MediaCard() {
   return (
     <Card
@@ -34,10 +36,12 @@ export default function MediaCard() {
       <CardContent sx={{ flexGrow: 1, pl: "5%", pr: "5%" }}>
         <Grid container>
           <Grid item xs={8}>
-            $1,080
+            <Chip color="success" label="15 Credits" />
           </Grid>
           <Grid item xs={2}>
-            $1,500
+            <Typography style={{ textDecoration: "line-through" }}>
+              $1,500
+            </Typography>
           </Grid>
           <Grid item xs={2}>
             $1,080

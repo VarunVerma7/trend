@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 
 export default function MediaCard() {
   return (
@@ -24,8 +25,17 @@ export default function MediaCard() {
         image="1st.png"
       />
       <CardContent sx={{ flexGrow: 1 }}>
-        <Typography gutterBottom variant="h5" component="h2">
-          Heading
+        <Grid container>
+          <Grid container justifyContent="flex-start">
+            1,080$
+          </Grid>
+          <Grid container justifyContent="flex-end">
+            1,080$
+          </Grid>
+        </Grid>
+
+        <Typography gutterBottom variant="h6" component="h2">
+          Amazon beauty product pack
         </Typography>
         <Typography>
           This is a media card. You can use this section to describe the

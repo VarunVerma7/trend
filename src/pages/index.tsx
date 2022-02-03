@@ -101,12 +101,24 @@ export default function Album() {
               spacing={2}
               justifyContent="space-between"
             >
-              <Button variant="contained">Paid Ad Websites</Button>
-              <Button variant="outlined">Instagram</Button>
-              <Button variant="outlined">TikTok</Button>
-              <Button variant="outlined">Facebook</Button>
-              <Button variant="outlined">Youtube</Button>
-              <Button variant="outlined">Amazon</Button>
+              <Button fullWidth variant="contained">
+                Paid Ad Websites
+              </Button>
+              <Button fullWidth variant="outlined">
+                Instagram
+              </Button>
+              <Button fullWidth variant="outlined">
+                TikTok
+              </Button>
+              <Button fullWidth variant="outlined">
+                Facebook
+              </Button>
+              <Button fullWidth variant="outlined">
+                Youtube
+              </Button>
+              <Button fullWidth variant="outlined">
+                Amazon
+              </Button>
             </Stack>
           </Box>
           {/* End hero unit */}

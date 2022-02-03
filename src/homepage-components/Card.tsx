@@ -6,7 +6,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 export default function MediaCard() {
   return (
     <Card
@@ -20,31 +25,60 @@ export default function MediaCard() {
         component="img"
         sx={{
           // 16:9
-          pt: "10.25%",
+          pt: "5%",
+          pl: "5%",
+          pr: "5%",
         }}
         image="1st.png"
       />
-      <CardContent sx={{ flexGrow: 1 }}>
+      <CardContent sx={{ flexGrow: 1, pl: "5%", pr: "5%" }}>
         <Grid container>
-          <Grid container justifyContent="flex-start">
-            1,080$
+          <Grid item xs={8}>
+            $1,080
           </Grid>
-          <Grid container justifyContent="flex-end">
-            1,080$
+          <Grid item xs={2}>
+            $1,500
+          </Grid>
+          <Grid item xs={2}>
+            $1,080
           </Grid>
         </Grid>
+        <br />
 
-        <Typography gutterBottom variant="h6" component="h2">
+        <Typography variant="h6" component="h2">
           Amazon beauty product pack
         </Typography>
-        <Typography>
-          This is a media card. You can use this section to describe the
-          content.
+        <Typography gutterBottom>
+          Everything you need to launch a brand on Amazon. Learn more
+        </Typography>
+        <Typography sx={{ fontStyle: "italic" }} gutterBottom>
+          Use credits across any cobination of the following tiers:
         </Typography>
       </CardContent>
+      <List>
+        <ListItem>
+          <ListItemIcon>
+            <FiberManualRecordIcon />
+          </ListItemIcon>
+          <ListItemText primary="Top Level - Up to 13 images" />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <FiberManualRecordIcon />
+          </ListItemIcon>
+          <ListItemText primary="Top Level - Up to 13 images" />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <FiberManualRecordIcon />
+          </ListItemIcon>
+          <ListItemText primary="Top Level - Up to 13 images" />
+        </ListItem>
+      </List>{" "}
       <CardActions>
-        <Button size="small">View</Button>
-        <Button size="small">Edit</Button>
+        <Button style={{ backgroundColor: "yellow" }} fullWidth size="small">
+          Buy Now
+        </Button>
       </CardActions>
     </Card>
   );

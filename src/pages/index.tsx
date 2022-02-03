@@ -49,14 +49,14 @@ export default function Album() {
       </AppBar>
       <main>
         {/* Hero unit */}
-        <Box
-          sx={{
-            bgcolor: "background.paper",
-            pt: 8,
-            pb: 6,
-          }}
-        >
-          <Container maxWidth="lg">
+        <Container maxWidth="xl">
+          <Box
+            sx={{
+              bgcolor: "background.paper",
+              pt: 8,
+              pb: 6,
+            }}
+          >
             <Grid container>
               <div
                 style={{
@@ -72,21 +72,8 @@ export default function Album() {
                 </Grid>
               </div>
             </Grid>
-            <Typography
-              variant="h5"
-              align="center"
-              color="text.secondary"
-              paragraph
-            >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
-            </Typography>
-
-            <br />
-            <Typography>I need content for</Typography>
-          </Container>
-        </Box>
+          </Box>
+        </Container>
         <Container maxWidth="xl">
           <Box
             sx={{
@@ -95,6 +82,8 @@ export default function Album() {
               pb: 6,
             }}
           >
+            <Typography>I need content for</Typography>
+
             <Stack
               sx={{ pt: 4 }}
               direction="row"

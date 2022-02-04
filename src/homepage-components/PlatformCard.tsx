@@ -1,8 +1,20 @@
 import { Paper, Grid, Box, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  buttonHover: {
+    "&:hover": {
+      backgroundColor: "blue !important",
+    },
+  },
+});
 
 export default function PlatformCard({ content, img }) {
+  const classes = useStyles();
+
   return (
     <Paper
+      className={classes.buttonHover}
       sx={
         content !== "Amazon"
           ? { backgroundColor: "#272727", width: "100%" }

@@ -14,6 +14,15 @@ import ListItemText from "@mui/material/ListItemText";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Chip from "@mui/material/Chip";
 import Link from "@mui/material/Link";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  buttonHover: {
+    "&:hover": {
+      backgroundColor: "blue !important",
+    },
+  },
+});
 
 export default function ProductCard({
   productName,
@@ -25,6 +34,8 @@ export default function ProductCard({
   bottomLevel,
   img,
 }) {
+  const classes = useStyles();
+
   return (
     <Card
       sx={{
@@ -65,7 +76,10 @@ export default function ProductCard({
         </Typography>
         <Typography variant="body2" gutterBottom>
           Everything you need to launch a brand on Amazon.
-          <Link>Learn more</Link>
+          <span style={{ color: "grey", textDecoration: "underline" }}>
+            {" "}
+            Learn more
+          </span>
         </Typography>
         <Typography
           variant="body2"
@@ -112,6 +126,7 @@ export default function ProductCard({
         }}
       >
         <Button
+          className={classes.buttonHover}
           style={{ backgroundColor: "#FFB917", color: "black" }}
           fullWidth
           size="small"

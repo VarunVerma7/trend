@@ -3,7 +3,7 @@ import PlatformCard from "./PlatformCard";
 
 const platforms = [
   { content: "Paid Ads / Website", img: "PaidAds.png" },
-  { content: "instagram", img: "Instagram.png" },
+  { content: "Instagram", img: "Instagram.png" },
   { content: "TikTok", img: "TikTok.png" },
   { content: "Facebook", img: "Facebook.png" },
   { content: "Youtube", img: "Youtube.png" },

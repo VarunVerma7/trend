@@ -1,8 +1,19 @@
 import { Container, Box, Grid, Typography, Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles({
+  buttonHover: {
+    "&:hover": {
+      backgroundColor: "blue !important",
+    },
+  },
+});
 
 export default function TopLayout() {
+  const classes = useStyles();
+
   return (
     <Container maxWidth="xl">
       <Box
@@ -19,11 +30,14 @@ export default function TopLayout() {
                 alignItems: "center",
               }}
             >
-              <ArrowBackIcon
-                color="action"
-                style={{ transform: "scale(1.3)", fill: "white" }}
-              />
-              <Typography style={{ margin: "25px" }} variant="h6">
+              <Button className={classes.buttonHover}>
+                <ArrowBackIcon
+                  color="action"
+                  style={{ transform: "scale(1.3)", fill: "white" }}
+                />
+              </Button>
+
+              <Typography style={{ margin: "25px" }} variant="h4">
                 Content Quick Packs
               </Typography>
             </div>
@@ -37,6 +51,7 @@ export default function TopLayout() {
                 color: "black",
                 marginTop: "25px",
               }}
+              className={classes.buttonHover}
             >
               Start Without a Pack
               <ArrowRightAltIcon />

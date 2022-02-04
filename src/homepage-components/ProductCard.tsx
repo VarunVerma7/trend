@@ -86,7 +86,7 @@ export default function ProductCard({
           sx={{ fontStyle: "italic", pt: "2%" }}
           gutterBottom
         >
-          Use credits across any cobination of the following tiers:
+          Use credits across any combination of the following tiers:
         </Typography>
       </CardContent>
       <List>

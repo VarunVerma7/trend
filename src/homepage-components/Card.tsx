@@ -80,8 +80,22 @@ export default function MediaCard() {
           <ListItemText primary="Top Level - Up to 13 images" />
         </ListItem>
       </List>{" "}
-      <CardActions>
-        <Button style={{ backgroundColor: "yellow" }} fullWidth size="small">
+      <CardActions
+        sx={{
+          pl: "4%",
+          pb: "5%",
+          pr: "4%",
+        }}
+      >
+        <Button
+          style={{ backgroundColor: "#FFB917", color: "black" }}
+          fullWidth
+          size="small"
+          sx={{
+            pt: "3%",
+            pb: "3%",
+          }}
+        >
           Buy Now
         </Button>
       </CardActions>

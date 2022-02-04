@@ -101,7 +101,7 @@ export default function ProductCard({
             </ListItemIcon>
             <ListItemText
               primaryTypographyProps={{ fontSize: "10px" }}
-              primary={"Top Level - " + toplevel}
+              primary={text}
             />
           </ListItem>
         ))}

@@ -97,7 +97,7 @@ export default function ProductCard({
       </CardContent>
       <List>
         {[
-          { text: `Top Level = ${toplevel}`, color: "#FFE483" },
+          { text: `Top Level - ${toplevel}`, color: "#FFE483" },
           { text: `Mid Level - ${midLevel}`, color: "#E2E2E2" },
           { text: `Standard Level - ${bottomLevel}`, color: "#E8AF42" },
         ].map(({ text, color }) => (

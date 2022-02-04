@@ -90,33 +90,21 @@ export default function ProductCard({
         </Typography>
       </CardContent>
       <List>
-        <ListItem style={{ padding: 0 }}>
-          <ListItemIcon style={{ transform: "scale(.5)" }}>
-            <FiberManualRecordIcon style={{ color: "#FFE483" }} />
-          </ListItemIcon>
-          <ListItemText
-            primaryTypographyProps={{ fontSize: "10px" }}
-            primary={"Top Level - " + toplevel}
-          />
-        </ListItem>
-        <ListItem style={{ padding: 0 }}>
-          <ListItemIcon style={{ transform: "scale(.5)" }}>
-            <FiberManualRecordIcon style={{ color: "#E2E2E2" }} />
-          </ListItemIcon>
-          <ListItemText
-            primaryTypographyProps={{ fontSize: "10px" }}
-            primary={"Mid Level - " + midLevel}
-          />
-        </ListItem>
-        <ListItem style={{ padding: 0 }}>
-          <ListItemIcon style={{ transform: "scale(.5)" }}>
-            <FiberManualRecordIcon style={{ color: "#E8AF42" }} />
-          </ListItemIcon>
-          <ListItemText
-            primaryTypographyProps={{ fontSize: "10px" }}
-            primary={"Standard Level - " + bottomLevel}
-          />
-        </ListItem>
+        {[
+          { text: `Top Level = ${toplevel}`, color: "#FFE483" },
+          { text: `Mid Level - ${midLevel}`, color: "#E2E2E2" },
+          { text: `Standard Level - ${bottomLevel}`, color: "#E8AF42" },
+        ].map(({ text, color }) => (
+          <ListItem style={{ padding: 0 }}>
+            <ListItemIcon style={{ transform: "scale(.5)" }}>
+              <FiberManualRecordIcon style={{ color }} />
+            </ListItemIcon>
+            <ListItemText
+              primaryTypographyProps={{ fontSize: "10px" }}
+              primary={"Top Level - " + toplevel}
+            />
+          </ListItem>
+        ))}
       </List>{" "}
       <CardActions
         sx={{

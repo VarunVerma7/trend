@@ -45,6 +45,12 @@ export default function ProductCard({
         backgroundColor: "#171717",
       }}
     >
+      <img
+        src="amazonwhite.png"
+        width="50px"
+        height="20px"
+        style={{ transform: "translate(370%, 250%)" }}
+      />
       <CardMedia
         component="img"
         sx={{

@@ -14,7 +14,15 @@ import ListItemText from "@mui/material/ListItemText";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Chip from "@mui/material/Chip";
 
-export default function MediaCard() {
+export default function MediaCard({
+  productName,
+  credits,
+  strikeThroughPrice,
+  realPrice,
+  toplevel,
+  midLevel,
+  bottomLevel,
+}) {
   return (
     <Card
       sx={{
@@ -37,21 +45,21 @@ export default function MediaCard() {
       <CardContent sx={{ flexGrow: 1, pl: "5%", pr: "5%" }}>
         <Grid container>
           <Grid item xs={8}>
-            <Chip color="success" label="15 Credits" />
+            <Chip color="success" label={credits} />
           </Grid>
           <Grid item xs={2}>
             <Typography style={{ textDecoration: "line-through" }}>
-              $1,500
+              {strikeThroughPrice}
             </Typography>
           </Grid>
           <Grid item xs={2}>
-            $1,080
+            {realPrice}
           </Grid>
         </Grid>
         <br />
 
         <Typography variant="h6" component="h2">
-          Amazon beauty product pack
+          {productName}
         </Typography>
         <Typography gutterBottom>
           Everything you need to launch a brand on Amazon. Learn more
@@ -65,19 +73,19 @@ export default function MediaCard() {
           <ListItemIcon>
             <FiberManualRecordIcon />
           </ListItemIcon>
-          <ListItemText primary="Top Level - Up to 13 images" />
+          <ListItemText primary={toplevel} />
         </ListItem>
         <ListItem>
           <ListItemIcon>
             <FiberManualRecordIcon />
           </ListItemIcon>
-          <ListItemText primary="Top Level - Up to 13 images" />
+          <ListItemText primary={midLevel} />
         </ListItem>
         <ListItem>
           <ListItemIcon>
             <FiberManualRecordIcon />
           </ListItemIcon>
-          <ListItemText primary="Top Level - Up to 13 images" />
+          <ListItemText primary={bottomLevel} />
         </ListItem>
       </List>{" "}
       <CardActions

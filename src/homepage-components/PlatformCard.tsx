@@ -2,7 +2,13 @@ import { Paper, Grid, Box, Typography } from "@mui/material";
 
 export default function PlatformCard({ content, img }) {
   return (
-    <Paper sx={{ backgroundColor: "#272727", width: "100%" }}>
+    <Paper
+      sx={
+        content !== "Amazon"
+          ? { backgroundColor: "#272727", width: "100%" }
+          : { backgroundColor: "#FFB917", width: "100%" }
+      }
+    >
       <Grid
         container
         spacing={0}
@@ -15,7 +21,9 @@ export default function PlatformCard({ content, img }) {
           <img src={img} />
         </Box>
 
-        <Typography>content</Typography>
+        <Typography sx={content === "Amazon" ? { color: "black" } : null}>
+          {content}
+        </Typography>
       </Grid>
     </Paper>
   );

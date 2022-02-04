@@ -15,13 +15,16 @@ export default function PlatformCard({ content, img }) {
         direction="column"
         alignItems="center"
         justifyContent="center"
-        style={{ minHeight: "10vh" }}
+        style={{ minHeight: "15vh" }}
       >
         <Box sx={{ m: "2%" }}>
           <img src={img} />
         </Box>
 
-        <Typography sx={content === "Amazon" ? { color: "black" } : null}>
+        <Typography
+          fontSize={12}
+          sx={content === "Amazon" ? { color: "black" } : null}
+        >
           {content}
         </Typography>
       </Grid>

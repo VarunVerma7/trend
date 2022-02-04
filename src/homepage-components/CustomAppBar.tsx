@@ -15,7 +15,7 @@ export default function ButtonAppBar() {
         <Paper />
         <Typography
           align="right"
-          variant="h6"
+          variant="body1"
           color="inherit"
           style={{ flex: 1 }}
         >

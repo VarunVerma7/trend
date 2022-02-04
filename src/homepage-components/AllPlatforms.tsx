@@ -20,13 +20,13 @@ export default function AllPlatforms() {
       <Typography variant="h4">I need content for my</Typography>
 
       <Stack
-        sx={{ pt: 4 }}
+        sx={{ pt: 3 }}
         direction="row"
         spacing={2}
         justifyContent="space-between"
       >
         {platforms.map(({ content, img }) => (
-          <PlatformCard content={content} img={img} />
+          <PlatformCard key={content} content={content} img={img} />
         ))}
       </Stack>
     </Box>

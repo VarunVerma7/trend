@@ -13,8 +13,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Chip from "@mui/material/Chip";
+import Link from "@mui/material/Link";
 
-export default function MediaCard({
+export default function ProductCard({
   productName,
   credits,
   strikeThroughPrice,
@@ -22,6 +23,7 @@ export default function MediaCard({
   toplevel,
   midLevel,
   bottomLevel,
+  img,
 }) {
   return (
     <Card
@@ -36,56 +38,70 @@ export default function MediaCard({
         component="img"
         sx={{
           // 16:9
-          pt: "5%",
           pl: "5%",
           pr: "5%",
         }}
-        image="1st.png"
+        style={{ maxHeight: "30vh" }}
+        image={img}
       />
-      <CardContent sx={{ flexGrow: 1, pl: "5%", pr: "5%" }}>
+      <CardContent sx={{ flexGrow: 1, pl: "5%", pr: "5%", pb: "-2%" }}>
         <Grid container>
-          <Grid item xs={8}>
+          <Grid item xs={6}>
             <Chip color="success" label={credits} />
           </Grid>
-          <Grid item xs={2}>
-            <Typography style={{ textDecoration: "line-through" }}>
+          <Grid item xs={3}>
+            <Typography
+              style={{ textDecoration: "line-through", color: "grey" }}
+            >
               {strikeThroughPrice}
             </Typography>
           </Grid>
-          <Grid item xs={2}>
-            {realPrice}
+          <Grid item xs={3}>
+            <Typography>{realPrice}</Typography>
           </Grid>
         </Grid>
-        <br />
-
-        <Typography variant="h6" component="h2">
+        <Typography sx={{ pt: "2%" }} variant="h6">
           {productName}
         </Typography>
-        <Typography gutterBottom>
-          Everything you need to launch a brand on Amazon. Learn more
+        <Typography variant="body2" gutterBottom>
+          Everything you need to launch a brand on Amazon.
+          <Link>Learn more</Link>
         </Typography>
-        <Typography sx={{ fontStyle: "italic" }} gutterBottom>
+        <Typography
+          variant="body2"
+          sx={{ fontStyle: "italic", pt: "2%" }}
+          gutterBottom
+        >
           Use credits across any cobination of the following tiers:
         </Typography>
       </CardContent>
       <List>
-        <ListItem>
-          <ListItemIcon>
-            <FiberManualRecordIcon />
+        <ListItem style={{ padding: 0 }}>
+          <ListItemIcon style={{ transform: "scale(.5)" }}>
+            <FiberManualRecordIcon style={{ color: "#FFE483" }} />
           </ListItemIcon>
-          <ListItemText primary={toplevel} />
+          <ListItemText
+            primaryTypographyProps={{ fontSize: "10px" }}
+            primary={"Top Level - " + toplevel}
+          />
         </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <FiberManualRecordIcon />
+        <ListItem style={{ padding: 0 }}>
+          <ListItemIcon style={{ transform: "scale(.5)" }}>
+            <FiberManualRecordIcon style={{ color: "#E2E2E2" }} />
           </ListItemIcon>
-          <ListItemText primary={midLevel} />
+          <ListItemText
+            primaryTypographyProps={{ fontSize: "10px" }}
+            primary={"Mid Level - " + midLevel}
+          />
         </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <FiberManualRecordIcon />
+        <ListItem style={{ padding: 0 }}>
+          <ListItemIcon style={{ transform: "scale(.5)" }}>
+            <FiberManualRecordIcon style={{ color: "#E8AF42" }} />
           </ListItemIcon>
-          <ListItemText primary={bottomLevel} />
+          <ListItemText
+            primaryTypographyProps={{ fontSize: "10px" }}
+            primary={"Standard Level - " + bottomLevel}
+          />
         </ListItem>
       </List>{" "}
       <CardActions

@@ -1,8 +1,9 @@
 import { Grid } from "@mui/material";
-import MediaCard from "./Card";
+import ProductCard from "./ProductCard";
 
 const products = [
   {
+    img: "1st.png",
     productName: "Amazon beauty product pack",
     credits: "15 credits",
     strikeThroughPrice: "$1500",
@@ -12,6 +13,7 @@ const products = [
     bottomLevel: "Up to 35 images or 12 videos",
   },
   {
+    img: "2nd.png",
     productName: "Amazon product launch",
     credits: "35 credits",
     strikeThroughPrice: "$4500",
@@ -21,6 +23,7 @@ const products = [
     bottomLevel: "Up to 100 images or 30 videos",
   },
   {
+    img: "3rd.png",
     productName: "Product Reviews",
     credits: "85 credits",
     strikeThroughPrice: "$7500",
@@ -43,9 +46,11 @@ export default function AllProducts() {
           topLevel,
           midLevel,
           bottomLevel,
+          img,
         }) => (
           <Grid item key={realPrice} xs={12} sm={6} md={4}>
-            <MediaCard
+            <ProductCard
+              img={img}
               realPrice={realPrice}
               productName={productName}
               credits={credits}

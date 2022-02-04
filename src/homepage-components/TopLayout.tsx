@@ -7,7 +7,7 @@ export default function TopLayout() {
     <Container maxWidth="xl">
       <Box
         sx={{
-          pt: 8,
+          pt: 3,
           pb: 6,
         }}
       >
@@ -21,9 +21,9 @@ export default function TopLayout() {
             >
               <ArrowBackIcon
                 color="action"
-                style={{ transform: "scale(3)", fill: "white" }}
+                style={{ transform: "scale(1.3)", fill: "white" }}
               />
-              <Typography style={{ margin: "25px" }} variant="h2">
+              <Typography style={{ margin: "25px" }} variant="h6">
                 Content Quick Packs
               </Typography>
             </div>
@@ -35,7 +35,7 @@ export default function TopLayout() {
               style={{
                 backgroundColor: "#FFFFFF",
                 color: "black",
-                marginTop: "55px",
+                marginTop: "25px",
               }}
             >
               Start Without a Pack

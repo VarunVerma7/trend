@@ -15,6 +15,11 @@ const theme = createTheme({
     },
     h6: {
       color: "white",
+      fontSize: "16px",
+    },
+    body2: {
+      color: "grey",
+      fontSize: "10px",
     },
   },
 });
@@ -25,8 +30,8 @@ export default function Album() {
       <CssBaseline />
       <CustomAppBar />
       <main>
-        <TopLayout />
-        <Container maxWidth="xl">
+        <Container maxWidth="md">
+          <TopLayout />
           <AllPlatforms />
           <AllProducts />
         </Container>

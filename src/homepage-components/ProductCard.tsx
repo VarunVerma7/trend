@@ -15,6 +15,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Chip from "@mui/material/Chip";
 import Link from "@mui/material/Link";
 import { makeStyles } from "@mui/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useStyles = makeStyles({
   buttonHover: {
@@ -35,6 +36,8 @@ export default function ProductCard({
   img,
 }) {
   const classes = useStyles();
+  const matches = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  console.log("MATCHES VAL ", matches);
 
   return (
     <Card
@@ -49,7 +52,11 @@ export default function ProductCard({
         src="amazonwhite.png"
         width="50px"
         height="20px"
-        style={{ transform: "translate(370%, 250%)" }}
+        style={
+          matches
+            ? { transform: "translate(370%, 290%)" }
+            : { transform: "translate(490%, 290%)" }
+        }
       />
       <CardMedia
         component="img"

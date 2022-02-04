@@ -95,7 +95,7 @@ export default function ProductCard({
           { text: `Mid Level - ${midLevel}`, color: "#E2E2E2" },
           { text: `Standard Level - ${bottomLevel}`, color: "#E8AF42" },
         ].map(({ text, color }) => (
-          <ListItem style={{ padding: 0 }}>
+          <ListItem key={color} style={{ padding: 0 }}>
             <ListItemIcon style={{ transform: "scale(.5)" }}>
               <FiberManualRecordIcon style={{ color }} />
             </ListItemIcon>

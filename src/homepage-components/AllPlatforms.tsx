@@ -22,7 +22,7 @@ export default function AllPlatforms() {
       <Stack
         sx={{ pt: 3 }}
         direction="row"
-        spacing={2}
+        spacing={{ xs: 1, sm: 2, md: 4 }}
         justifyContent="space-between"
       >
         {platforms.map(({ content, img }) => (

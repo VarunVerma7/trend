@@ -3,9 +3,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
     "type-check": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",
